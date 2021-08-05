@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Privacy Table</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="body">
+        <div class="heading">
+            <h1>Software Privacy Table</h1>
+            <i>Powered by TOS;DR</i>
+        </div>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Privacy Grade</th>
+            </tr>
+            {% for name, grade, url in service_list %}
+            <tr>
+                <td><a href="{{ url }}">{{ name }}</a></td>
+                <td>{{ grade }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
